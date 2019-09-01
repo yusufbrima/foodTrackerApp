@@ -1,25 +1,25 @@
-**App Deployment Steps**
+#**App Deployment Steps**
 
-**[Create Heroku Account](https://heroku.com)** 
+##**[Create Heroku Account](https://heroku.com)** 
 
-**[Install Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)**
+##**[Install Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)**
 
-**Freeze Project dependencies** 
+##**Freeze Project dependencies** 
 	-***pip freeze >requirements.txt***
 
-**Create Procfile**
+##**Create Procfile**
  	-***web: gunicorn -w 4 __filename__:__appname__***
 
-**Create .gitignore *.* files to be ignored**
+##**Create .gitignore *.* files to be ignored**
 
-**heroku login :: to login via the terminal**
+##**heroku login :: to login via the terminal**
 
-**git add .**
+##**git add .**
 
-**git commit -m**
-
-
-**git  git push heroku <branchname>  deployin the app on the heroku platform**
+##**git commit -m**
 
 
-***Click [here](https://damp-badlands-25517.herokuapp.com/home) to see sample app***
+##**git  git push heroku <branchname>  deployin the app on the heroku platform**
+
+
+##***<a href="https://damp-badlands-25517.herokuapp.com/home" target="_blank" >Click here to see sample app</a>***
