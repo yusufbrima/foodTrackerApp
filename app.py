@@ -25,8 +25,8 @@ def index():
 		db.commit()
 	cur =  db.execute("SELECT log_date.entry_date, SUM(food.protein) AS total_protein,SUM(food.carbohydrates) \
 		AS total_carbohydrates,SUM(food.fat) AS total_fat,SUM(food.calories) AS \
-		total_calories FROM log_date JOIN food_date ON food_date.log_date_id =  log_date.id \
-		JOIN food on food.id =  food_date.food_id \
+		total_calories FROM log_date LEFT JOIN food_date ON food_date.log_date_id =  log_date.id \
+		LEFT JOIN food on food.id =  food_date.food_id \
 		GROUP BY log_date.id ORDER BY log_date.entry_date DESC")
 	results =  cur.fetchall()
 	data_result =  [] 
@@ -95,5 +95,5 @@ def food():
 	cur =  db.execute("SELECT name,protein,carbohydrates,fat,calories FROM food")
 	results =  cur.fetchall()
 	return render_template("add_food.html",results = results)
-#if __name__ == '__main__':
-	#app.run("localhost",80,debug=True)
+if __name__ == '__main__':
+	app.run("localhost",80,debug=True)
