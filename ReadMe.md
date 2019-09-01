@@ -14,8 +14,11 @@
 
 **heroku login :: to login via the terminal**
 
-**git add . **
-**git commit -m **
+**git add .**
+
+**git commit -m**
+
+
 **git  git push heroku <branchname>  deployin the app on the heroku platform**
 
 
